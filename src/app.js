@@ -18,8 +18,18 @@ app.use(
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({
+    msg: "server is working fine🚀🚀",
+    api_doc: "https://documenter.getpostman.com/view/38681155/2sAXxY2TJw",
+  });
+});
+
 app.get("/api", (req, res) => {
-  res.json({ message: "Welcome to the Loan Management System" });
+  res.json({
+    msg: "server api is working fine🚀🚀",
+    api_doc: "https://documenter.getpostman.com/view/38681155/2sAXxY2TJw",
+  });
 });
 // Routes
 app.use("/api/auth", authRoutes);
